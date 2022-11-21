@@ -5,8 +5,91 @@
     <title></title>
   </head>
   <body>
-    <p>kahsdkuahsk</p>
-    <span>ahsjkjdhsk</span>
-    <img src="./content/github.png" alt="">
+
+    <!-- navbar -->
+    <nav class="navbar">
+      <h1 class="nav-logo" onclick="openTab('hp')">GAMBIRASIO INTERNI</h1>
+      <ul class="nav-wrapper d-flex align-center">
+          <li class="nav-link nav-storia" onclick="openTab('storia')">STORIA</li>
+          <li class="nav-link nav-servizi" onclick="openTab('servizi')">SERVIZI</li>
+          <li class="nav-link nav-realizzazioni" onclick="openTab('realizzazioni')">REALIZZAZIONI</li>
+          <li class="nav-link nav-contatti" onclick="openTab('contatti')">CONTATTI</li>
+          <li class="nav-link nav-galleria" onclick="openTab('galleria')">GALLERIA</li>
+          <li class="nav-link nav-language d-flex align-center justify-center">
+            <div>EN</div>
+          </li>
+      </ul>
+    </nav>
+
+    <div class="main">
+
+      <!-- Gambirasio Homepage -->
+
+      <div id="hp" class="section section-hp">
+
+          <div class="carousel-container">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div data-caption="Lorem ipsum culetto bello" class="swiper-slide">
+                     <img src="/images/content/prova.jpeg" alt="">
+                </div>
+                <div data-caption="Trallallero trallallà" class="swiper-slide">
+                  <img src="/images/content/prova4.jpeg" alt="">
+                </div>
+                <div data-caption="caption foto 3" class="swiper-slide">
+                  <img src="/images/content/prova2.jpeg" alt="">
+                </div>
+                <div data-caption="caption foto 4" class="swiper-slide">
+                  <img src="/images/content/prova3.jpeg" alt="">
+                </div>
+              </div>
+              <!-- <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div> -->
+            </div>
+        </div>
+
+        <div class="slide-captions current-title"></div>
+
+      </div>
+
+
+      <!-- Storia -->
+      
+      <div id="storia" class=" section section-storia" style="display:none">
+    
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- script per far funzionare le tabs -->
+    <script>
+      function openTab(sectionName) {
+        var i;
+        var x = document.getElementsByClassName("section");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(sectionName).style.display = "block";
+      }
+    </script>
+
   </body>
 </html>

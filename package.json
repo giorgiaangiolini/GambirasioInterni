@@ -89,5 +89,6 @@
   },
   "target": "web",
   "dependencies": {
+    "swiper": "^8.4.5"
   }
 }
