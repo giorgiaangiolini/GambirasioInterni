@@ -29,7 +29,11 @@ h2, .h2{
   border-radius: 20px;
   width: fit-content;
   color: $black;
-  &:hover { opacity: 70%; }
+  &:hover { 
+    opacity: 70%;
+    transition: all 400ms ease;
+    border: 1px solid rgb(111, 110, 110);   
+  }
 }
 
 // navbar
@@ -67,9 +71,26 @@ h2, .h2{
   line-height: 1;
   text-align: center;
   letter-spacing: $letterspacing;
+  position: relative;
   cursor: pointer;
-    &:hover { opacity: 70%; }
-    &:active { opacity: 70%; }
+    &:hover { 
+      opacity: 70%;
+      transition: all 200ms ease;       
+    }
+    &:before{
+      content:"";
+      position: absolute;
+      bottom: -5px;
+      height: 2px;
+      width: 0px;
+      background-color: $black;
+      transition: .4s ease;
+    }
+    &.nav-active{
+      &:before{
+        width: 100%;
+      }
+    }
 }
 
 .nav-language{
@@ -196,6 +217,21 @@ h2, .h2{
   font-size: $f30;
   letter-spacing: $letterspacing;
   margin-bottom: $spacing15;
+  display: flex;
+  align-items: center;
+  span{
+    height: 3px;
+    display: block;
+    width: 0px;
+    margin-right: 5px;
+    background-color: #000000;
+    transition: width .3s ease;
+  }
+  &.tab-active{
+    span{
+     width:30px;
+    }
+  }
 }
 
 .service-description-container{
@@ -219,7 +255,7 @@ h2, .h2{
 }
 
 .fade-animation{
-  animation:opac 0.8s}
+  animation:opac 0.6s ease;}
   @keyframes opac{
     from{opacity:0} to{opacity:1}
 }

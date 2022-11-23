@@ -10,13 +10,13 @@
 
     <!-- navbar -->
     <nav class="navbar">
-      <h1 class="nav-logo" onclick="openTab('hp')">GAMBIRASIO INTERNI</h1>
+      <h1 class="nav-logo nav-tab" tab="hp">GAMBIRASIO INTERNI</h1>
       <ul class="nav-wrapper d-flex align-center">
-          <li class="nav-link nav-storia" onclick="openTab('storia')">STORIA</li>
-          <li class="nav-link nav-servizi" onclick="openTab('servizi')">SERVIZI</li>
-          <li class="nav-link nav-realizzazioni" onclick="openTab('realizzazioni')">REALIZZAZIONI</li>
-          <li class="nav-link nav-contatti" onclick="openTab('contatti')">CONTATTI</li>
-          <li class="nav-link nav-galleria" onclick="openTab('galleria')">GALLERIA</li>
+          <li class="nav-link nav-tab" tab="storia">STORIA</li>
+          <li class="nav-link nav-tab" tab="servizi">SERVIZI</li>
+          <li class="nav-link nav-tab" tab="realizzazioni">REALIZZAZIONI</li>
+          <li class="nav-link  nav-tab" tab="contatti">CONTATTI</li>
+          <li class="nav-link nav-tab" tab="galleria">GALLERIA</li>
           <li class="nav-link nav-language d-flex align-center justify-center">
             <div>EN</div>
           </li>
@@ -81,15 +81,15 @@
         <div class="servizi-container">
 
           <div class="servizi-labels">
-            <li class="service-li tablink" onclick="openLink(event, 'Tapezzeria')">TAPEZZERIA</li>
-            <li class="service-li tablink" onclick="openLink(event, 'Tappeti')">TAPPETI</li>
-            <li class="service-li tablink" onclick="openLink(event, 'Oggetti')">OGGETTI</li>
-            <li class="service-li tablink" onclick="openLink(event, 'Progetti')">PROGETTI</li>
+            <li class="service-li tablink" tab="Tapezzeria"> <span></span> TAPEZZERIA</li>
+            <li class="service-li tablink" tab="Tappeti"><span></span> TAPPETI</li>
+            <li class="service-li tablink"tab="Oggetti"><span></span> OGGETTI</li>
+            <li class="service-li tablink" tab="Progetti"><span></span> PROGETTI</li>
           </div>
 
           <div class="service-description-container">
           
-            <div id="Tapezzeria" class="service fade-animation" style="display:none">
+            <div id="Tapezzeria" class="service fade-animation" style="display:block">
                 <div class="service-wrapper">
                     <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris <span class="service-italic">dicta sunt explicabo. </span> nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
               </div>
@@ -121,6 +121,15 @@
 
        </div>
       </div>
+
+      <!-- Realizzazioni -->
+
+      <div id="realizzazioni" class="section section-realizzazioni" style="display:none">
+        <div class="realizzazioni-container">
+              <h1>Prova</h1>
+        </div>
+      </div>
+      
 
       <!-- contatti -->
 
