@@ -62,7 +62,7 @@ function initGalleria(){
          let activeSlide = this.el.querySelector('div.swiper-slide-active');
          let caption = activeSlide.getAttribute("data-caption");
          let captionTitle = activeSlide.getAttribute("data-title");
-         let slideCaption = document.querySelector(".slide-captions");
+         let slideCaption = document.querySelector(".gallery-captions");
          if(slideCaption != null){
            slideCaption.innerHTML = "<p class='slide-title'>" + captionTitle + "<p class='current-title'>" + caption + "</p>"
          }
@@ -86,7 +86,7 @@ navTabs.forEach((item)=>{
         x[i].style.display = "none";
         navTabs[i].classList.remove("nav-active");
       }
-      document.getElementById(tabId).style.display = "block";
+      document.getElementById(tabId).style.display = "flex";
       evt.target.classList.add("nav-active");
 
       
