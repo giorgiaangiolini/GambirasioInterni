@@ -24,7 +24,7 @@ h2, .h2{
 
 .galleria-btn{
   margin-top: $spacing15;
-  padding: 8px 12px;
+  padding: 8px 15px;
   border: 1px solid $black;
   border-radius: 20px;
   width: fit-content;
@@ -192,7 +192,8 @@ h2, .h2{
 
 .storia-img-container{
   width: 550px;
-  height: 715px;
+  max-width: 100%;
+  height: auto;
 }
 
 .storia-img-container img{
@@ -214,7 +215,6 @@ h2, .h2{
 
 .servizi-labels{
   width: 50%;
-  position: absolute;
   left: $margin;
 }
 
@@ -242,7 +242,6 @@ h2, .h2{
 
 .service-description-container{
   width: 50%;
-  position: absolute;
   right: $margin;
 }
 
@@ -285,8 +284,6 @@ h2, .h2{
   width: 50%;
   max-width: 100%;
   text-align: center;
-  padding-right: $spacing30*6;
-  padding-left: $spacing30*6;
 }
 
 .contatti-description{
@@ -294,6 +291,18 @@ h2, .h2{
   max-width: 100%;
   font-family: $speziaRegular;
   font-size: $f24;
+}
+
+.det-architect{
+  margin-top: $margin;
+}
+
+.architect-site{
+  &:hover { 
+    opacity: 70%;
+    transition: all 200ms ease; 
+    cursor: pointer;      
+  }
 }
 
 // galleria
@@ -329,8 +338,6 @@ h2, .h2{
   }
 }
 
-
-
 .square {
   width: 100%;
   position: relative;
@@ -350,4 +357,72 @@ h2, .h2{
   padding-bottom: 100%;
 }
 
+// modal
 
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  background-color: white;
+}
+
+.overlay-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: $black;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  opacity: 70%;
+  transition: all 200ms ease;   
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.project-captions{
+  position: absolute;
+  bottom: $spacing30*2;
+  left: $margin;
+}
+
+.close-btn{
+  font-size: $f30;
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  cursor: pointer;
+}
+
+
+
+// mobile 
+
+@media screen and (max-width:768px){
+  .storia-container{
+    flex-direction: column;
+  }
+}

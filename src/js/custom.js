@@ -72,6 +72,58 @@ function initGalleria(){
   });
 }
 
+// Slide Project function
+function sliderProjects(carosello, modal){
+  const swiperGalleria = new Swiper(carosello, {
+    loop: true,
+    slidesPerView: 1,
+    draggable: true,
+    grabCursor: true,
+    spaceBetween: 0,
+    centeredSlides: true,
+    effect: "fade",
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+     slideChangeTransitionStart: function () {
+         let activeSlide = this.el.querySelector('div.swiper-slide-active');
+         let caption = activeSlide.getAttribute("data-caption");
+         let captionTitle = activeSlide.getAttribute("data-title");
+         let slideCaption = modal.querySelector(".project-captions");
+         if(slideCaption != null){
+           slideCaption.innerHTML = "<p class='slide-title'>" + captionTitle + "<p class='current-title'>" + caption + "</p>"
+         }
+     }
+   }
+  
+  });
+}
+
+// Tabs projects 
+function initProjects(){
+  let tabProjects = document.querySelectorAll(".project-tab");
+
+  tabProjects.forEach((item)=>{
+    let tabId = item.getAttribute("tab");
+    item.addEventListener("click", function(evt){
+        let modal = document.getElementById(tabId);
+        modal.style.display = "block";
+        let close = modal.querySelector('.close-btn');
+        let carosello = modal.querySelector('.project-swiper');
+        sliderProjects(carosello, modal);
+        close.addEventListener('click', function(){
+          modal.style.display = "none";
+        })
+      });
+  })
+}
+
 
 // Tabs navbar
 
@@ -88,13 +140,15 @@ navTabs.forEach((item)=>{
       }
       document.getElementById(tabId).style.display = "flex";
       evt.target.classList.add("nav-active");
-
       
       if(tabId == "hp"){initHome()}
       if(tabId == "galleria"){initGalleria()}
+      if(tabId == "realizzazioni"){initProjects()}
 
   });
 })
+
+
 
 // Tabs servizi
 
@@ -117,6 +171,7 @@ serviziTabs.forEach((item)=>{
   })
 
 })
+
 
 
   
