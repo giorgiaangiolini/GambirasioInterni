@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=500, initial-scale=1" />
     <title></title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -11,6 +12,21 @@
     <!-- navbar -->
     <nav class="navbar">
       <h1 class="nav-logo nav-tab" tab="hp">GAMBIRASIO INTERNI</h1>
+
+      <span id="menu_toggle" class="menu-icon">
+        
+        <svg class="menu_close" width="25" height="9" viewBox="0 0 25 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="0.5" x2="25" y2="0.5" stroke="black"/>
+          <line y1="8.5" x2="25" y2="8.5" stroke="black"/>
+          </svg>
+          
+          <svg class="menu_open" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="1.35355" y1="0.646447" x2="19.0312" y2="18.3241" stroke="black"/>
+            <line x1="1.30758" y1="18.4853" x2="18.9852" y2="0.807645" stroke="black"/>
+            </svg>
+            
+      </span>
+
       <ul class="nav-wrapper d-flex align-center">
           <li class="nav-link nav-tab" tab="storia">STORIA</li>
           <li class="nav-link nav-tab" tab="servizi">SERVIZI</li>
@@ -22,6 +38,19 @@
           </li>
       </ul>
     </nav>
+ 
+    <div class="menu_mobile">
+      <div class="menu_container">
+        <ul>
+          <li class="link-menu-open nav-tab" tab="storia">STORIA</li>
+          <li class="link-menu-open nav-tab" tab="servizi">SERVIZI</li>
+          <li class="link-menu-open nav-tab" tab="realizzazioni">REALIZZAZIONI</li>
+          <li class="link-menu-open  nav-tab" tab="contatti">CONTATTI</li>
+          <li class="link-menu-open nav-tab" tab="galleria">GALLERIA</li>
+          <li class="link-menu-open nav-tab" tab="galleria">EN</li>
+        </ul>
+      </div>
+    </div>    
 
     <div class="main">
 
@@ -32,17 +61,13 @@
           <div class="carousel-container">
             <div  id="swiperHp" class="swiper mySwiper">
               <div class="swiper-wrapper">
-                <div data-title="Ristorante da Vittorio" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" class="swiper-slide">
-                     <img src="/images/content/prova.jpeg" alt="">
+                <div data-title="Ristorante da Vittorio" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" class="swiper-slide" style="background-image: url('/images/content/prova.jpeg');">
                 </div>
-                <div data-title="Prova caption 2" data-caption="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip" class="swiper-slide">
-                  <img src="/images/content/prova4.jpeg" alt="">
+                <div data-title="Prova caption 2" data-caption="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" class="swiper-slide" style="background-image: url('/images/content/prova2.jpeg');">
                 </div>
-                <div  data-title="Prova caption 3" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" class="swiper-slide">
-                  <img src="/images/content/prova2.jpeg" alt="">
+                <div  data-title="Prova caption 3" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" style="background-image: url('/images/content/prova4.jpeg');" class="swiper-slide">
                 </div>
-                <div data-title="Prova caption 4" data-caption="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" class="swiper-slide">
-                  <img src="/images/content/prova3.jpeg" alt="">
+                <div data-title="Prova caption 4" data-caption="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" class="swiper-slide" style="background-image: url('/images/content/prova3.jpeg');">
                 </div>
               </div>
               <!-- <div class="swiper-button-next"></div>
@@ -50,7 +75,7 @@
             </div>
         </div>
 
-        <div class="slide-captions current-title"></div>
+          <div class="slide-captions current-title"></div>
 
       </div>
 
@@ -94,7 +119,7 @@
           
             <div id="Tapezzeria" class="service fade-animation " style="display:block">
                 <div class="service-wrapper">
-                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris <span class="service-italic">dicta sunt explicabo. </span> nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris <span class="service-italic">dicta sunt explicabo. </span> nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris <span class="service-italic">dicta sunt explicabo. </span> nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
               </div>
             </div>
           
@@ -334,6 +359,7 @@
               </a>
 
             </div>
+
             <div class="storia-img-wrapper">
               <div class="carousel-container galleria-container">
                 <div id="swiperGalleria" class="swiper">
@@ -356,9 +382,8 @@
                 </div>
                 <div class="gallery-captions current-title"></div>
             </div>
-    
-           
             </div>
+
        </div>
       </div>
 

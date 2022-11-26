@@ -2,6 +2,18 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 
+
+// menu mobile 
+let menuIcon = document.querySelector("#menu_toggle");
+let menu = document.querySelector(".menu_mobile");
+
+menuIcon.addEventListener("click", function(){
+  menu.classList.toggle("active");
+  menuIcon.classList.toggle("active");
+})
+
+
+
 // slideshow homepage
 
 function initHome(){
@@ -11,7 +23,8 @@ function initHome(){
     draggable: true,
     grabCursor: true,
     spaceBetween: 0,
-    centeredSlides: true,
+    speed: 1000,
+    parallax: true,
     effect: "fade",
     autoplay: {
       delay: 4000,
@@ -37,7 +50,6 @@ function initHome(){
 
 initHome()
 
-
 // slideshow galleria
 
 function initGalleria(){
@@ -48,7 +60,8 @@ function initGalleria(){
     grabCursor: true,
     spaceBetween: 0,
     centeredSlides: true,
-    effect: "fade",
+    autoHeight: true,
+    // effect: "fade",
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
@@ -82,6 +95,7 @@ function sliderProjects(carosello, modal){
     spaceBetween: 0,
     centeredSlides: true,
     effect: "fade",
+    speed: 600,
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
@@ -111,6 +125,7 @@ function initProjects(){
 
   tabProjects.forEach((item)=>{
     let tabId = item.getAttribute("tab");
+
     item.addEventListener("click", function(evt){
         let modal = document.getElementById(tabId);
         modal.style.display = "block";
@@ -131,12 +146,17 @@ let navTabs = document.querySelectorAll(".nav-tab");
 
 navTabs.forEach((item)=>{
   let tabId = item.getAttribute("tab");
+
   item.addEventListener("click", function(evt){
       let i;
       let x = document.getElementsByClassName("section");
       for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
         navTabs[i].classList.remove("nav-active");
+      }
+      if (item.classList.contains('link-menu-open')) {
+        menu.classList.toggle("active");
+        menuIcon.classList.toggle("active");
       }
       document.getElementById(tabId).style.display = "flex";
       evt.target.classList.add("nav-active");
@@ -147,7 +167,6 @@ navTabs.forEach((item)=>{
 
   });
 })
-
 
 
 // Tabs servizi
