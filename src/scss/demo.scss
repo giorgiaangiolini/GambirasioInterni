@@ -1,4 +1,3 @@
-// qui scrivo tutto il css del sito :) 
 img{
   width:100%;
   height: auto;
@@ -35,8 +34,8 @@ h2, .h2{
   width: fit-content;
   color: $black;
   &:hover { 
-    background-color: $black;
-    color: white;
+    background-color: #ECECEC;
+    color: $black;
   }
 }
 
@@ -111,6 +110,10 @@ h2, .h2{
   height: $spacing15*2;
   border: 1px solid $black;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: normal;
 }
 
 .nav-language div{
@@ -168,6 +171,9 @@ h2, .h2{
   }
 }
 
+.swiper-button-next, .swiper-button-prev{
+  color: transparent !important;
+}
 
 
 // slider captions
@@ -177,13 +183,11 @@ h2, .h2{
   font-size: $f15;
 }
 
-.current-title{
+.current-title, .current-title-hp{
   font-family: $speziaRegular;
-  width: 53%;
+  width: 50%;
   font-size: $f15;
 }
-
-
 
 // section storia
 
@@ -220,7 +224,7 @@ h2, .h2{
 }
 
 .storia-img-container{
-  width: 550px;
+  width: 70%;
   max-width: 100%;
   height: auto;
 }
@@ -343,10 +347,9 @@ h2, .h2{
 
 .gallery-captions{
   position: absolute;
-  bottom: -80px;
+  bottom: -90px;
   width: 100%;
 }
-
 
 // realizzazioni
 
@@ -398,6 +401,13 @@ h2, .h2{
   left: 0;
   background-color: white;
   background-color: white;
+  .carousel-container{
+    width:800px;
+    .swiper-slide{opacity: 0 !important;}
+    .swiper-slide-active{
+      opacity: 1 !important;
+    }
+  }
 }
 
 .overlay-content {
@@ -444,8 +454,8 @@ h2, .h2{
   top: 15px;
   right: 50px;
   cursor: pointer;
+  z-index: 9;
 }
-
 
 // menu mobile 
 
@@ -482,12 +492,26 @@ h2, .h2{
   }
 }
 
+// mobile overall
 
-@media screen and (max-width:900px){
+@media screen and (max-width:1000px){
+
+  .main{
+    font-size: 20px !important;
+    padding-top: 140px;
+    margin-top: 0px;
+    margin: 0 25px;
+    box-sizing: border-box;
+    display: block;
+    h2{
+      font-size: 20px !important;
+    }
+  }
 
   .galleria-btn{
+    // margin-top: $margin/2;
     margin-top: $spacing15;
-    padding: 8px 15px;
+    padding: 8px 10px;
     border: 1px solid $black;
     border-radius: 20px;
     width: fit-content;
@@ -498,7 +522,11 @@ h2, .h2{
       color: white;
     }
   }
-  
+
+  .btn-oggetti{
+    width: 95%;
+    margin-top: $margin;
+  }
 
    // navbar
 
@@ -515,30 +543,28 @@ h2, .h2{
     }
 
   h2, .h2{
-    font-size: $f24;
+    font-size: 20px;
   }
 
-  .main{
-    margin: 0 25px;
-    margin-top: $header_height*2;
-    box-sizing: border-box;
-    display: block;
-  }
-
-  .galleria-btn{
-    margin-top: $margin/2;
-  }
 
   .section{
     width: 100%;
   }
   // homepage
 
-
-  .current-title{
-    width: 85%;
+  .section-hp{
+    height: auto;
   }
-
+  .current-title-hp{
+    width: 75%;
+    position: fixed;
+    bottom: $margin;
+  }
+  .slide-title{
+    width: 75%;
+    position: fixed;
+    bottom: $margin*2;
+  }
 
   // storia
   .storia-container{
@@ -602,11 +628,31 @@ h2, .h2{
       font-size: $f20;
     }
 
+  }
+
+  .overlay{
     .close-btn{
       right: 25px;
     }
   }
   
+  .carousel-realizzazioni{
+    padding: $margin/2 70px;
+  }
+
+  .square-description{
+      margin-bottom: $margin/2;
+  }
+  
+  .overlay{
+    .project-captions, .current-title{
+      width: 75%;
+      position: fixed;
+      bottom: $margin;
+      left: $margin/2;
+    }
+  }
+
 
   // contatti 
   .contatti-container{
@@ -616,9 +662,21 @@ h2, .h2{
   .contatti-wrapper{
     margin-top: 45px;
     margin-bottom: 60px;
+    width: 100%;
   }
 
 
+// galleria
 
+.gallery-captions{
+  opacity: 0;
+  visibility: hidden;
+}
 
+}
+
+@media screen and (max-width:704px){
+  .carousel-realizzazioni{
+    padding: $margin/2 170px;
+  }
 }

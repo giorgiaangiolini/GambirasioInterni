@@ -41,7 +41,7 @@ function initHome(){
          let captionTitle = activeSlide.getAttribute("data-title");
          let slideCaption = document.querySelector(".slide-captions");
          if(slideCaption != null){
-           slideCaption.innerHTML = "<p class='slide-title'>" + captionTitle + "<p class='current-title'>" + caption + "</p>"
+           slideCaption.innerHTML = "<p class='slide-title'>" + captionTitle + "<p class='current-title-hp'>" + caption + "</p>"
          }
      }
    } 
@@ -60,7 +60,6 @@ function initGalleria(){
     grabCursor: true,
     spaceBetween: 0,
     centeredSlides: true,
-    autoHeight: true,
     // effect: "fade",
     autoplay: {
       delay: 4000,
