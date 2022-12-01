@@ -90,7 +90,7 @@ function sliderProjects(carosello, modal){
     loop: true,
     slidesPerView: 1,
     draggable: true,
-    grabCursor: true,
+    grabCursor: false,
     spaceBetween: 0,
     centeredSlides: true,
     effect: "fade",
