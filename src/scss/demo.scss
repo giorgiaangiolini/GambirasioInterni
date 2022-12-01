@@ -211,7 +211,7 @@ h2, .h2{
 
 .current-title, .current-title-hp{
   font-family: $speziaRegular;
-  width: 50%;
+  width: 70%;
   font-size: $f15;
 }
 
@@ -471,7 +471,7 @@ h2, .h2{
 
 .project-captions{
   position: absolute;
-  bottom: $spacing30*2;
+  bottom: $margin;
   left: $margin;
 }
 
@@ -508,7 +508,9 @@ h2, .h2{
     visibility: visible;
   }
 }
-
+.link-menu-open{
+  font-size: 18px;
+}
 .menu-icon{
   .menu_open{
     display: none;
@@ -524,41 +526,41 @@ h2, .h2{
 @media screen and (max-width:1000px){
 
   .main{
-    font-size: 20px !important;
-    padding-top: 140px;
+    font-size: 18px !important;
+    padding-top: 90px;
     margin-top: 0px;
     margin: 0 25px;
     box-sizing: border-box;
     display: block;
     h2{
-      font-size: 20px !important;
+      font-size: 16px !important;
     }
   }
 
   .galleria-btn{
     // margin-top: $margin/2;
     margin-top: $spacing15;
-    padding: 8px 10px;
+    padding: 8px 8px;
     border: 1px solid $black;
     border-radius: 20px;
-    width: fit-content;
-    font-size: 20px !important;
+    width: 100%;
+    font-size: 16px !important;
     color: $black;
+    text-align: center;
     &:hover { 
       background-color: $black;
       color: white;
     }
   }
 
-  .btn-oggetti{
-    width: 95%;
-    margin-top: $margin;
-  }
-
    // navbar
 
    .navbar{
     padding: 0 25px;
+   }
+
+   .nav-logo{
+    font-size: 20px;
    }
 
     .menu-icon {
@@ -570,7 +572,7 @@ h2, .h2{
     }
 
   h2, .h2{
-    font-size: 20px;
+    font-size: 16px;
   }
 
 
@@ -581,17 +583,15 @@ h2, .h2{
 
   .section-hp{
     height: auto;
+    .slide-captions{
+      position: fixed;
+      bottom: $margin;
+      left: 25px;
+      width: 100%;
+    }
   }
-  .current-title-hp{
-    width: 75%;
-    position: fixed;
-    bottom: $margin;
-  }
-  .slide-title{
-    width: 75%;
-    position: fixed;
-    bottom: $margin*2;
-  }
+
+
 
   // storia
   .storia-container{
@@ -600,7 +600,7 @@ h2, .h2{
   }
   .storia-text-wrapper{
     width: 100%;
-    padding-top: $margin;
+    padding: $margin 0px;
   }
 
   .storia-img-wrapper{
@@ -610,6 +610,10 @@ h2, .h2{
 
   .storia-img-container{
     width: 100%;
+  }
+
+  .storia-firstDescription, .storia-secondDescription{
+    font-size: 18px;
   }
 
   // servizi
@@ -637,7 +641,11 @@ h2, .h2{
   }
 
   .service-description{
-    font-size: $f24;
+    font-size: 18px;
+  }
+
+  .service-li{
+    font-size: 16px;
   }
 
   // realizzazioni 
@@ -652,7 +660,7 @@ h2, .h2{
   .card-container{
     width: 100%;
     p{
-      font-size: $f20;
+      font-size: 18px;
     }
 
   }
@@ -672,7 +680,7 @@ h2, .h2{
   }
   
   .overlay{
-    .project-captions, .current-title{
+    .project-captions{
       width: 75%;
       position: fixed;
       bottom: $margin;
@@ -692,6 +700,9 @@ h2, .h2{
     width: 100%;
   }
 
+  .contatti-description{
+    font-size: 18px;
+  }
 
 // galleria
 
