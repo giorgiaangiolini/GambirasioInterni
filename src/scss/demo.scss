@@ -717,9 +717,17 @@ h2, .h2{
       bottom: $margin;
       left: $margin/2;
     }
+    .slide-captions{
+      position: fixed;
+      bottom: $margin;
+      left: 25px;
+      width: 100%;
+    }
   }
 
   .overlay-content{
+    align-items: flex-start;
+    margin-top: 50px;
     .swiper-slide{
       background-position: top;
     }
