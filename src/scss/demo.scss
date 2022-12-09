@@ -763,5 +763,14 @@ h2, .h2{
   font-size: $f15;
 }
 
+.project-swiper{
+  .swiper-button-next{
+    pointer-events: none;
+  }
+  .swiper-button-prev{
+    pointer-events: none;
+  }
+}
+
 }
 
