@@ -203,6 +203,7 @@ h2, .h2{
 
 .slide-title{
   font-family: $speziaItalic;
+  font-style: italic;
   font-size: $f15;
 }
 
@@ -312,6 +313,7 @@ h2, .h2{
 
 .service-italic{
   font-family: $speziaItalic;
+  font-style: italic;
 }
 
 .fade-animation{
@@ -585,8 +587,7 @@ h2, .h2{
 
    .navbar{
     padding: 0 25px;
-    position: static;
-    z-index: 10;
+    position: relative;
    }
 
    .nav-logo{
@@ -614,7 +615,7 @@ h2, .h2{
     height: auto;
     .slide-captions{
       position: fixed;
-      bottom: $margin;
+      bottom: 25px;
       left: 25px;
       width: 100%;
     }
@@ -712,14 +713,14 @@ h2, .h2{
   .overlay{
     padding: 25px;
     .project-captions{
-      width: 75%;
+      width: calc(100% - 50px);
       position: fixed;
-      bottom: $margin;
+      bottom: 25px;
       left: $margin/2;
     }
     .slide-captions{
       position: fixed;
-      bottom: $margin;
+      bottom: 25px;
       left: 25px;
       width: 100%;
     }
@@ -754,6 +755,12 @@ h2, .h2{
 .gallery-captions{
   opacity: 0;
   visibility: hidden;
+}
+
+.current-title, .current-title-hp{
+  font-family: $speziaRegular;
+  width: calc(100% - 50px);
+  font-size: $f15;
 }
 
 }
