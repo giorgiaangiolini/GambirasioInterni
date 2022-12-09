@@ -171,10 +171,7 @@ h2, .h2{
   }
 }
 
-// .swiper-button-next, .swiper-button-prev{
-//   color: transparent !important;
-// }
-
+// inizio swiper prev next con pallini
 .project-swiper{
   .swiper-button-next{
     position: fixed;
@@ -199,7 +196,7 @@ h2, .h2{
     }
   }
 }
-
+// fine swiper prev next con pallini
 
 
 // slider captions
@@ -244,7 +241,6 @@ h2, .h2{
 .storia-img-wrapper{
   width: 50%;
   max-width: 100%;
-  padding: $spacing30;
   display: flex;
   justify-content: center;
 }
@@ -377,6 +373,10 @@ h2, .h2{
   width: 100%;
 }
 
+.galleria-text{
+  padding-right: 50px;
+}
+
 // realizzazioni
 
 .realizzazioni-container{
@@ -393,6 +393,7 @@ h2, .h2{
   p{
     margin-left: 3px;
     padding-right: 15px;
+    font-family: $speziaRegular;
   }
 }
 
@@ -415,6 +416,8 @@ h2, .h2{
   padding-bottom: 100%;
 }
 
+
+
 // modal
 
 .overlay {
@@ -428,7 +431,7 @@ h2, .h2{
   background-color: white;
   background-color: white;
   .carousel-container{
-    width:800px;
+    width:100%;
     max-width: 100%;
     .swiper-slide{opacity: 0 !important;}
     .swiper-slide-active{
@@ -439,28 +442,26 @@ h2, .h2{
 
 .overlay-content {
   position: relative;
-  top: 15%;
   width: 100%;
   text-align: center;
-  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: $black;
-  display: block;
-  transition: 0.3s;
-}
+// .overlay a {
+//   padding: 8px;
+//   text-decoration: none;
+//   font-size: 36px;
+//   color: $black;
+//   display: block;
+//   transition: 0.3s;
+// }
 
-.overlay a:hover, .overlay a:focus {
-  opacity: 70%;
-  transition: all 200ms ease;   
-}
+// .overlay a:hover, .overlay a:focus {
+//   opacity: 70%;
+//   transition: all 200ms ease;   
+// }
 
 .overlay .closebtn {
   position: absolute;
@@ -482,6 +483,33 @@ h2, .h2{
   right: 50px;
   cursor: pointer;
   z-index: 9;
+}
+
+// slideshow progetto
+.overlay-content{
+  height: 100vh;
+  position: relative;
+  .slide-captions{
+    position: absolute;
+    bottom: $margin;
+    left: 0px;
+  }
+  .carousel-container{
+    padding: 0;
+  }
+  .project-swiper{
+    height: 70vh !important;
+  }
+  .swiper-slide{
+    width:100% !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0 !important;
+  }
+  .swiper-slide-active{
+    opacity: 1 !important;
+  }
 }
 
 // menu mobile 
@@ -527,7 +555,7 @@ h2, .h2{
 
   .main{
     font-size: 18px !important;
-    padding-top: 90px;
+    padding-top: 20px;
     margin-top: 0px;
     margin: 0 25px;
     box-sizing: border-box;
@@ -557,6 +585,8 @@ h2, .h2{
 
    .navbar{
     padding: 0 25px;
+    position: static;
+    z-index: 10;
    }
 
    .nav-logo{
@@ -575,7 +605,6 @@ h2, .h2{
     font-size: 16px;
   }
 
-
   .section{
     width: 100%;
   }
@@ -589,9 +618,10 @@ h2, .h2{
       left: 25px;
       width: 100%;
     }
+    .swiper-slide{
+      background-position: top;
+    }
   }
-
-
 
   // storia
   .storia-container{
@@ -659,12 +689,12 @@ h2, .h2{
 
   .card-container{
     width: 100%;
-    p{
+    .p{
       font-size: 18px;
+      font-family: $speziaRegular;
     }
 
   }
-
   .overlay{
     .close-btn{
       right: 25px;
@@ -675,16 +705,23 @@ h2, .h2{
     padding: $margin/2;
   }
 
-  .square-description{
+  .square-title{
       margin-bottom: $margin/2;
   }
   
   .overlay{
+    padding: 25px;
     .project-captions{
       width: 75%;
       position: fixed;
       bottom: $margin;
       left: $margin/2;
+    }
+  }
+
+  .overlay-content{
+    .swiper-slide{
+      background-position: top;
     }
   }
 

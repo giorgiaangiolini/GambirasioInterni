@@ -1,7 +1,7 @@
 
 $fh1: 26px;
 $f30: 30px;
-$f24: 24px;
+$f24: 22px;
 $f20: 20px;
 $f15: 15px;
 $f12: 12px;
@@ -28,7 +28,9 @@ $apercu: 'Apercu';
 .justify-center{justify-content: center;}
 
 
-
+a:hover{
+  opacity: 70%;
+}
 
 
 // %cover {
