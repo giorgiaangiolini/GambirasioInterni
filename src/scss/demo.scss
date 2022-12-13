@@ -196,6 +196,32 @@ h2, .h2{
     }
   }
 }
+
+.swiperhp{
+  .swiper-button-next{
+    position: fixed;
+    width:50%;
+    height: 100vh;
+    right: 0;
+    top:0;
+    cursor: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='black'/%3E%3C/svg%3E%0A"), auto;
+    &::after{
+      content: none;
+    }
+  }
+  .swiper-button-prev{
+    position: fixed;
+    width:50%;
+    height: 100vh;
+    left: 0;
+    top:0;
+    cursor: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='black'/%3E%3C/svg%3E%0A"), auto;
+    &::after{
+      content: none;
+    }
+  }
+}
+
 // fine swiper prev next con pallini
 
 
@@ -386,7 +412,7 @@ h2, .h2{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 3px;
+  gap: 16px;
 }
 
 .card-container{

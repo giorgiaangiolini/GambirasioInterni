@@ -30,10 +30,10 @@ function initHome(){
       delay: 4000,
       disableOnInteraction: false,
     },
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
     on: {
      slideChangeTransitionStart: function () {
          let activeSlide = this.el.querySelector('div.swiper-slide-active');
