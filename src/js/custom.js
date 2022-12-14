@@ -26,6 +26,7 @@ function initHome(){
     speed: 1000,
     parallax: true,
     effect: "fade",
+    fadeEffect: { crossFade: true },
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
@@ -94,6 +95,7 @@ function sliderProjects(carosello, modal){
     spaceBetween: 0,
     centeredSlides: true,
     effect: "fade",
+    fadeEffect: { crossFade: true },
     speed: 600,
     autoplay: {
       delay: 4000,
