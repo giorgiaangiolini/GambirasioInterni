@@ -133,6 +133,10 @@ h2, .h2{
   letter-spacing: $letterspacing;
 }
 
+.tab-galleria{
+  font-family: $apercuitalic;
+}
+
 // homepage e slider homepage
 
 .section-hp{
@@ -180,7 +184,7 @@ h2, .h2{
     height: 100vh;
     right: 0;
     top:0;
-    cursor: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='black'/%3E%3C/svg%3E%0A"), auto;
+    cursor: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='black'/%3E%3C/svg%3E%0A"), auto;
     &::after{
       content: none;
     }
@@ -191,7 +195,7 @@ h2, .h2{
     height: 100vh;
     left: 0;
     top:0;
-    cursor: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='black'/%3E%3C/svg%3E%0A"), auto;
+    cursor: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='black'/%3E%3C/svg%3E%0A"), auto;
     &::after{
       content: none;
     }
@@ -205,7 +209,7 @@ h2, .h2{
     height: 100vh;
     right: 0;
     top:0;
-    cursor: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='black'/%3E%3C/svg%3E%0A"), auto;
+    cursor: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='black'/%3E%3C/svg%3E%0A"), auto;
     &::after{
       content: none;
     }
@@ -216,7 +220,7 @@ h2, .h2{
     height: 100vh;
     left: 0;
     top:0;
-    cursor: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='black'/%3E%3C/svg%3E%0A"), auto;
+    cursor: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='black'/%3E%3C/svg%3E%0A"), auto;
     &::after{
       content: none;
     }
@@ -395,6 +399,24 @@ em{
     cursor: pointer;      
   }
 }
+.section-storia{
+  position: relative;
+  .credits{
+    width: fit-content;
+    position: absolute;
+    right: 0px;
+    bottom: -100px;
+    font-size: 10px;
+    color: rgb(148, 148, 148);
+    font-family: $apercu;
+    a{
+      font-size: 10px;
+      color: rgb(148, 148, 148);
+  
+    }
+  }
+}
+
 
 // galleria
 
@@ -413,6 +435,13 @@ em{
   .galleria-text{
     padding-right: 50px;
   }
+}
+
+.ambra-simo{
+  font-size: 20px;
+  font-family: $speziaItalic;
+  margin-top: $spacing30;
+  margin-bottom: $spacing30;
 }
 
 // realizzazioni
@@ -500,6 +529,16 @@ em{
   bottom: $margin;
   left: $margin;
   width: 700px;
+}
+
+.foto-captions{
+  position: absolute;
+  bottom: 100px;
+  right: 0px;
+  font-family: $speziaRegular;
+  font-size: 12px;
+  color: rgb(148, 148, 148);
+  transform: rotate(-90deg);
 }
 
 .close-btn{
@@ -781,6 +820,13 @@ em{
 
   .contatti-description{
     font-size: 18px;
+  }
+
+  .section-storia{
+    .credits{
+      bottom: 10px;
+      right: 45px;
+    }
   }
 
 // galleria
