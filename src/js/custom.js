@@ -33,7 +33,6 @@ function initHome(){
     grabCursor: true,
     spaceBetween: 0,
     speed: 1000,
-    parallax: true,
     effect: "fade",
     fadeEffect: { crossFade: true },
     autoplay: {
@@ -75,7 +74,7 @@ function initGalleria(){
     // effect: "fade",
     autoplay: {
       delay: 4000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     // navigation: {
     //   nextEl: '.swiper-button-next',
