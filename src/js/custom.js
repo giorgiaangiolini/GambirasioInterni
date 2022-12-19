@@ -2,7 +2,7 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 
-
+let body = document.querySelector("body");
 // menu mobile 
 let menuIcon = document.querySelector("#menu_toggle");
 let menu = document.querySelector(".menu_mobile");
@@ -10,8 +10,17 @@ let menu = document.querySelector(".menu_mobile");
 menuIcon.addEventListener("click", function(){
   menu.classList.toggle("active");
   menuIcon.classList.toggle("active");
+  body.classList.toggle("hide")
 })
 
+
+if(window.innerWidth < 1000){
+  let main = document.querySelector(".main")
+  main.style.minHeight = `${window.innerHeight - 70}px`;
+  window.addEventListener("resize", function(){
+    main.style.minHeight = `${window.innerHeight - 70}px`;
+  })
+}
 
 
 // slideshow homepage
@@ -31,7 +40,7 @@ function initHome(){
       delay: 4500,
       disableOnInteraction: false,
     },
-    
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -132,11 +141,13 @@ function initProjects(){
     item.addEventListener("click", function(evt){
         let modal = document.getElementById(tabId);
         modal.style.display = "block";
+        body.style.overflow = "hidden";
         let close = modal.querySelector('.close-btn');
         let carosello = modal.querySelector('.project-swiper');
         sliderProjects(carosello, modal);
         close.addEventListener('click', function(){
           modal.style.display = "none";
+          body.style.overflow = "scroll";
         })
       });
   })
@@ -160,6 +171,7 @@ navTabs.forEach((item)=>{
       if (item.classList.contains('link-menu-open')) {
         menu.classList.toggle("active");
         menuIcon.classList.toggle("active");
+        body.classList.toggle("hide")
       }
       document.getElementById(tabId).style.display = "flex";
       evt.target.classList.add("nav-active");
