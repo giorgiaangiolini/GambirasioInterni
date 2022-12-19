@@ -626,6 +626,7 @@ em{
     margin: 0 15px;
     box-sizing: border-box;
     display: block;
+    min-height: calc(100vh - 70px);
     h2{
       font-size: 16px !important;
     }
@@ -679,8 +680,8 @@ em{
     height: auto;
     .slide-captions{
       position: fixed;
-      bottom: 25px;
-      left: 25px;
+      bottom: 15px;
+      left: 15px;
       width: 100%;
     }
     .swiper-slide{
@@ -840,7 +841,7 @@ em{
 
 .current-title, .current-title-hp{
   font-family: $speziaRegular;
-  width: calc(100% - 50px);
+  width: calc(100% - 30px);
   font-size: $f15;
 }
 
@@ -852,6 +853,18 @@ em{
     pointer-events: none;
   }
 }
+
+
+// aggiunte mobile
+
+.section-hp .swiper {
+  height: 50vh;
+}
+
+.swiperhp .swiper-button-next, .swiperhp .swiper-button-prev{
+display: none;
+}
+
 
 }
 
