@@ -875,7 +875,11 @@ display: none;
 
 @media screen and (max-width:1000px){
   .foto-captions{
-    display: none;
+    writing-mode: vertical-lr;
+    transform: rotate(180DEG);
+    right: 15px;
+    bottom: 15px;
+    font-size: 6px;
   }
 
   .ambra-simo{
