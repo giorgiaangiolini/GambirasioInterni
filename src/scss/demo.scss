@@ -12,6 +12,9 @@ body{
   overflow: hidden;
 }
 
+em{
+  font-style: italic !important;
+}
 
 .main{
   margin-left: $margin;
