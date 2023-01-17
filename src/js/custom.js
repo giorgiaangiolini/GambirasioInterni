@@ -1,6 +1,18 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+import imagesLoaded from 'imagesloaded';
 
+// preloader animation con fadeout
+let loader = document.getElementById("preloader");
+let loadText = document.querySelector(".preloader-wrapper");
+
+window.addEventListener("load", function(){
+  loadText.classList.toggle("fade");
+  loader.classList.toggle("fade");
+  setTimeout(function(){
+    loader.style.display= "none"
+  }, 1000);
+})
 
 let body = document.querySelector("body");
 // menu mobile 
